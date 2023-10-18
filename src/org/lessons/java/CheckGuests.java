@@ -16,8 +16,9 @@ public class CheckGuests {
 
         for (int i = 0; i < guests.length; i++) {
 
-            if (guestName.equals(guests[i]) == true) {
+            if (guestName.equals(guests[i])) {
                 isAuthorized = true;
+                break;
             }
         }
         if (isAuthorized){
