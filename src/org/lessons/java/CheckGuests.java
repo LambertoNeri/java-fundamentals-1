@@ -12,19 +12,38 @@ public class CheckGuests {
         System.out.println("Insert your name and surname");
         guestName = nameScan.nextLine();
         nameScan.close();
+
+
+//        for (int i = 0; i < guests.length; i++) {
+//
+//            if (guestName.equals(guests[i])) {
+//                isAuthorized = true;
+//                break;
+//            }
+//        }
+//        if (isAuthorized){
+//            System.out.println("Allowed");
+//        } else {
+//            System.out.println("not Allowed");
+//        }
+
         boolean isAuthorized = false;
+        int num = 0;
 
-        for (int i = 0; i < guests.length; i++) {
 
-            if (guestName.equals(guests[i])) {
+        while(num < guests.length){
+
+            if (guestName.equals(guests[num])) {
                 isAuthorized = true;
                 break;
             }
+            num++;
         }
+
         if (isAuthorized){
-            System.out.println("Allowed");
+           System.out.println("Allowed");
         } else {
-            System.out.println("not Allowed");
+           System.out.println("not Allowed");
         }
     }
 }
